@@ -354,7 +354,7 @@ import pandas as pd
 import joblib
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://attendence-lilac.vercel.app"}})
 
 # --- CONFIG ---
 datetoday = date.today().strftime("%m_%d_%y")
